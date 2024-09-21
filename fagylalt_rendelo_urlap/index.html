@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fagylalt Rendelés</title>
+    <style>
+        .valid { background-color: lightgreen; }
+        .invalid { background-color: lightyellow; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Fagylalt Rendelés</h2>
+        <form id="iceCreamForm">
+            <!-- Saját név -->
+            <div class="mb-3">
+                <label for="name" class="form-label">Saját név</label>
+                <input type="text" class="form-control" id="name" placeholder="Add meg a neved" required>
+                <div id="nameError" class="text-danger"></div>
+            </div>
+
+            <!-- Jelszó -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Jelszó (min 8 karakter)</label>
+                <input type="password" class="form-control" id="password" minlength="8" required>
+                <div id="passwordLength" class="form-text">0 / 8</div>
+            </div>
+
+            <!-- Választott fagylalt -->
+            <div class="mb-3">
+                <label for="iceCream" class="form-label">Választott fagylalt</label>
+                <input type="text" class="form-control" id="iceCream" placeholder="Add meg a fagylalt nevét" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Rendelés</button>
+        </form>
+
+        <div id="formMessage" class="mt-3"></div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
